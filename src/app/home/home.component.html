@@ -1,0 +1,8 @@
+@if (auth.connectedUser()) {
+    <p>Salut {{auth.connectedUser()?.username}}!</p>
+    <app-add-post></app-add-post>
+} @else {
+    
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+}

@@ -7,3 +7,11 @@ export interface User {
     createdAt?:string|Date;
     banDate?:string|Date;
 }
+
+export interface Post {
+    id?:number;
+    content:string;
+    postedAt?:string|Date,
+    author?:User;
+    respondTo?:Post;
+}
