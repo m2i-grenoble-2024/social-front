@@ -1,5 +1,7 @@
 # SocialFront
+Projet front end en angular lié à [ce backend Symfony](https://github.com/m2i-grenoble-2024/social-back).
 
+Une authentification par JWT est utilisée dans ce projet, pour toute documentation sur cet aspect, voir plutôt le [projet ionic-auth](https://github.com/m2i-grenoble-2024/ionic-auth) dont la code base de l'auth a été reprise.
 
 ## Structure Angular
 
