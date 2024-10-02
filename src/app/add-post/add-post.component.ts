@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Post } from '../entities';
 import { PostService } from '../post.service';
@@ -11,13 +11,17 @@ import { PostService } from '../post.service';
   styleUrl: './add-post.component.css'
 })
 export class AddPostComponent {
+  @Output()
+  posted= new EventEmitter();
+  @Input()
+  respondTo?:Post;
   
   constructor(private postService:PostService){}
 
   post:Post = {content:''}
 
   handleSubmit() {
-    console.log('coucou')
-    this.postService.add(this.post).subscribe(() => alert('bravo'))
+    this.post.respondTo = this.respondTo;
+    this.postService.add(this.post).subscribe((data) => this.posted.emit(data))
   }
 }

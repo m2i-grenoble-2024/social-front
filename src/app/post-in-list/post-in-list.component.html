@@ -1,6 +1,17 @@
 
-<article>
+<article (click)="fetchResponses()">
     <p><a [routerLink]="['/user/', post.author?.username]"> &#x40;{{post.author?.username}}</a></p>
     <p>{{post.content}}</p>
-    <p>{{post.postedAt|date:'M/dd/yy, hh:mm'}}</p>
+    <p>{{post.postedAt|date:'dd/MM/yy, HH:mm'}}</p>
+    <p>responses: {{post.responseCount}}</p>
+    <button [class]="{show:showForm}" (click)="showForm = !showForm">Respond</button>
+    @if(showForm) {
+        <app-add-post [respondTo]="post"></app-add-post>
+    }
+
+    @if(responses.length > 0) {
+        @for (item of responses; track item.id) {
+            <app-post-in-list [post]="item"></app-post-in-list>
+        }
+    }
 </article>

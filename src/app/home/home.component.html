@@ -1,10 +1,10 @@
 @if (auth.connectedUser()) {
-    <p>Salut {{auth.connectedUser()?.username}}!</p>
-    <app-add-post></app-add-post>
+<p>Salut {{auth.connectedUser()?.username}}!</p>
+<app-add-post (posted)="ngOnInit()"></app-add-post>
 } @else {
-    
-    <a routerLink="/login">Login</a>
-    <a routerLink="/register">Register</a>
+
+<a routerLink="/login">Login</a>
+<a routerLink="/register">Register</a>
 }
 
 @if(posts.length > 0) {

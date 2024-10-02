@@ -12,6 +12,9 @@ export class PostService {
   getAll(page = 1) {
     return this.http.get<Post[]>('http://localhost:8000/api/post?page='+page)
   }
+  getResponses(id:any, page = 1) {
+    return this.http.get<Post[]>(`http://localhost:8000/api/post/${id}?page=${page}`)
+  }
 
   getByUser(username:string, page = 1) {
     return this.http.get<Post[]>(`http://localhost:8000/api/post/user/${username}?page=${page}`)

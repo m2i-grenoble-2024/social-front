@@ -1,0 +1,14 @@
+article>button {
+    display: none;
+}
+article:hover>button {
+    display: block;
+}
+.show {
+    display: block!important;
+}
+
+article {
+    padding: 5px;
+    border: 1px solid lightgray;
+}

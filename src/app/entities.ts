@@ -14,4 +14,5 @@ export interface Post {
     postedAt?:string|Date,
     author?:User;
     respondTo?:Post;
+    responseCount?:number;
 }
