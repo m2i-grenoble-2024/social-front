@@ -6,3 +6,9 @@
     <a routerLink="/login">Login</a>
     <a routerLink="/register">Register</a>
 }
+
+@if(posts.length > 0) {
+    @for (item of posts; track item.id) {
+        <app-post-in-list [post]="item"></app-post-in-list>
+    }
+}

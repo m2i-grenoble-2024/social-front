@@ -1,0 +1,6 @@
+
+<article>
+    <p><a [routerLink]="['/user/', post.author?.username]"> &#x40;{{post.author?.username}}</a></p>
+    <p>{{post.content}}</p>
+    <p>{{post.postedAt|date:'M/dd/yy, hh:mm'}}</p>
+</article>

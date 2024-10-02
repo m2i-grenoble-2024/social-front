@@ -1,0 +1,10 @@
+
+<h1>&#x40;{{username}}</h1>
+
+@if(posts.length > 0) {
+    @for (item of posts; track item.id) {
+        <app-post-in-list [post]="item"></app-post-in-list>
+    }
+} @else {
+    <p>Looks like this user hasn't posted anything</p>
+}
