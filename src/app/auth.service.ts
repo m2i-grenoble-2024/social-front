@@ -45,4 +45,17 @@ export class AuthService {
               })
             );
   }
+
+  validateEmail(jwt:string) {
+    return this.http.post<void>('http://localhost:8000/api/user/validate', {}, 
+      {
+        headers: {
+          'Authorization': 'Bearer '+jwt
+        }
+      }
+    )
+  }
+  resendEmail(email:string) {
+    return this.http.get<void>('http://localhost:8000/api/user/validate?email='+email)
+  }
 }

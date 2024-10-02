@@ -17,5 +17,9 @@ export const routes: Routes = [
     {
         path:'user/:username', 
         loadComponent: () => import('./user-post/user-post.component').then( m => m.UserPostComponent)
-    }
+    },
+    {
+        path:'validate-email/:jwt', 
+        loadComponent: () => import('./validate-email/validate-email.component').then( m => m.ValidateEmailComponent)
+    },
 ];

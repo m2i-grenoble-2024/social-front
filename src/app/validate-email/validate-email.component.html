@@ -1,0 +1,13 @@
+<p>{{feedback}}</p>
+
+@if (showForm) {
+
+    <form (ngSubmit)="resend()">
+        <label>Please enter your email :
+            <input type="email" [(ngModel)]="email" name="email">
+        </label>
+        <button>Send</button>
+    </form>
+} @else {
+    <button (click)="showForm = true">Send validation link again</button>
+}

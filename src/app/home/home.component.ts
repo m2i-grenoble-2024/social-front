@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
   constructor(public auth:AuthService, private postService:PostService) {}
 
   ngOnInit(): void {
-    this.postService.getAll().subscribe(data => this.posts = data);
+    this.postService.getAll(1).subscribe(data => this.posts = data);
   }
 
 }
