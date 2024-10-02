@@ -17,6 +17,7 @@ export class AddPostComponent {
   post:Post = {content:''}
 
   handleSubmit() {
+    console.log('coucou')
     this.postService.add(this.post).subscribe(() => alert('bravo'))
   }
 }

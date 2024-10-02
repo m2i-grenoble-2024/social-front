@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+*,body {
+    margin:0;
+    padding:0;
+}
+a {
+    text-decoration: none;
+    color:steelblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+input, textarea {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+}
+
+input:hover,textarea:hover {
+    box-shadow: 1px 1px 10px skyblue;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 1px 1px 10px skyblue;
+    border-color: steelblue;
+}
+
+button {
+    border-radius: 5px;
+    border:none;
+    background-color: steelblue;
+    color:white;
+    padding:5px 12px;
+}
+
+button:hover {
+    background-color: rgb(97, 168, 225);
+}
+button:active {
+    background-color: white;
+    border: 1px solid steelblue;
+    color: steelblue;
+}
+
+.error {
+    color: rgb(226, 4, 4);
+}
+
+.active {
+    font-weight: bold;
+    color: black;
+}
+
+main {
+    padding: 10px;
+}
